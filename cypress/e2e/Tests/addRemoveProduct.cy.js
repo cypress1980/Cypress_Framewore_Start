@@ -7,7 +7,7 @@ describe("Test Suite : Login Into the Portal with valid crediential", () => {
     loginpage.openUrl();
     loginpage.enterUsername();
     loginpage.enterPassword();
-    loginpage.loginButton();
+    loginpage.clickLoginButton();
   });
   it("Login Into the Site with Invalid crediential", () => {
     loginpage.openUrl();

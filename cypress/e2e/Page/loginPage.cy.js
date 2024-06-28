@@ -13,12 +13,12 @@ cy.visit(this.url)
 enterUsername(){
 //cy.get(this.userName).clear()
 //cy.get(this.userName).type(standard_user);
-cy.get(this.userName).clear().type(standard_user);
+cy.get(this.userName).clear().type('standard_user');
 }
 enterPassword() {
     //cy.get(this.password).clear()
     //cy.get(this.password).type(secret_sauce);
-    cy.get(this.password).clear().type(secret_sauce)
+    cy.get(this.password).clear().type('secret_sauce')
 }
 
 clickLoginButton(){
@@ -26,10 +26,10 @@ clickLoginButton(){
 }
 
 loginValidation(){
-    cy.get(this.userName).clear().type(standard_user11);
-    cy.get(this.password).clear().type(secret_sauce22)
+    cy.get(this.userName).clear().type('standard_user11');
+    cy.get(this.password).clear().type('secret_sauce22')
     cy.get(this.loginButton).click()
-    cy.get('data-test="error-button"').should('have.text','Username and password do not match')
+    cy.get('[data-test="error"]').should('have.text','Epic sadface: Username and password do not match any user in this service')
     //cy.contains('Epic sadface: Username and password do not match any user in this service')
 
 }
