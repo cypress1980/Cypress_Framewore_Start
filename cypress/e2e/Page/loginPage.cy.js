@@ -30,7 +30,6 @@ loginValidation(){
     cy.get(this.password).clear().type('secret_sauce22')
     cy.get(this.loginButton).click()
     cy.get('[data-test="error"]').should('have.text','Epic sadface: Username and password do not match any user in this service')
-    //cy.contains('Epic sadface: Username and password do not match any user in this service')
 
 }
 
